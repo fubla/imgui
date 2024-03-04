@@ -1,7 +1,8 @@
 project "ImGui"
     kind "StaticLib"
     language "C++"
-    staticruntime "On"
+    cppdialect "C++20"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -21,7 +22,5 @@ project "ImGui"
         "imgui_tables.cpp"
     }
 
-
     filter "system:windows"
         systemversion "latest"
-        cppdialect "C++20"
